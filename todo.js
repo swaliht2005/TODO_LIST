@@ -1,29 +1,48 @@
-const taskInput = document.getElementById('in');
-const addTaskBtn = document.getElementById('button');
-const taskList =  document.getElementById('li');
-const moodchange = document.getElementById('mood')
 
-addTaskBtn.addEventListener('click',addt)
-taskList.addEventListener('click',bu)
-moodchange.addEventListener('click',mo)
+const input = document.getElementById(`in`)
+const button = document.getElementById(`bu`)
+const list = document.getElementById(`list`)
 
 
-function addt(){
-  const   task = taskInput.value.trim();
-  if(task){
-    const taskListItem = document.createElement('li');
-    taskListItem.textContent = task;
-    taskListItem.style.backgroundColor = getRandomColor();
-    taskList.ldappendChi(taskListItem);
-    taskInput.value = '';
-  }
+function todos(){
+const newli = document.createElement(`li`)
+const check = document.createElement(`input`)
+check.type = "checkbox";
+const dlt = document.createElement(`button`)
+dlt.textContent = "delete";
+const edit = document.createElement(`button`)
+edit.textContent = "edite";
+list.appendChild(newli)
+newli.textContent = input.value;
+newli.appendChild(check)
+newli.appendChild(dlt)
+newli.appendChild(edit)
+input.value = ""
+
+check.addEventListener(`click`,function(){
+ const complit = document.getElementById(`co`)
+ complit.appendChild(newli)
+check.remove();
+dlt.remove();
+edit.remove();
+})
+dlt.addEventListener(`click`,function(){
+    newli.remove()
+})
+
+edit.addEventListener(`click`,function(){
+  const newtext = prompt("edit youare task:",newli.firstChild.textContent);
+  if (newtext !== null) {
+    newli.firstChild.textContent = newtext;
+}
+})
+
+}
+
+function moodch(){
+  const changemood =  document.querySelector(`body`)
+changemood.style.backgroundColor='black'
 }
 
 
-function deleteTask(taskListItem) {
-  taskListItem.remove();
-}
 
-function completeTask(taskListItem) {
-  taskListItem.style.textDecoration = 'line-through';
-}

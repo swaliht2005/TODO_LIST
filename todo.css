@@ -1,40 +1,76 @@
 *{
+   
+}
+
+body{
     height: 100vh;
     width: 100vw;
-    margin: 0px;
     padding: 0px;
-}
-.maindiv{
+    margin: 0px;
     display: grid;
     justify-content: center;
     align-items: center;
+
 }
-.seconddiv{
-    height: 500px;
+hr{
+    margin-top: 174px;
+    
+}
+.main{
+    height: 250px;
     width: 1000px;
-    background-color: blueviolet;
+    border: 2px solid black;
+    margin-top: 200px;
+    background-color: cadetblue;
+    
+}
+.second{
+    height: 250px;
+    width: 1000px;
+    border: 2px solid black;
+    margin-bottom: 200px;
+    
+}
+
+#mood{
+    height: 40px;
+    width: 100px;
+    position: fixed;
+    top: 220px;
+    left: 1300px;
+    border-radius: 20px;
+    background-color: rgba(255, 68, 0, 0.671);
+    box-shadow: 5px 3px 3px 0px black;
+}
+
+#bu:hover{
+ background-color: rgba(0, 0, 0, 0.507);
+ color: white;
+}
+#co{
+    position: relative;
+    bottom: 20px;
+    left: 400px;
+    font-size: 20px;
 }
 #in{
-    height: 50px;
-    width: 300px;
-    text-align: center;
-    font-size: 30px;
-    border-radius: 30px;
-    margin-top: 50px;
-    border: 2px solid black;
+    height: 40px;
+    width: 250px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    border-radius: 20px;
 }
-#button{
-    height: 30px;
-    width: 30px;
+#bu{
+    position: relative;
+    top: 50px;  
+    left: 10px;
+    border-radius: 20px;
     font-size: 20px;
-    position: relative ;
-    top: -3px;
-    border: 2px solid black ;
 }
-#mood{
-    height: 7%;
-    width: 12%;
-    border-radius: 50px;
-    margin: 0 0 50px 502px;
-    border: 2px solid black ;
+#list{
+    position: relative;
+    font-size: 20px;
+    left: 400px;
+    bottom: 55px;
 }
