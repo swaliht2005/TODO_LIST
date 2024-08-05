@@ -41,7 +41,7 @@ edit.addEventListener(`click`,function(){
 
 function moodch(){
   const changemood =  document.querySelector(`body`)
-changemood.style.backgroundColor='black'
+changemood.style.backgroundColor='#97989c'
 }
 
 
